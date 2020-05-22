@@ -123,12 +123,20 @@ class App extends React.Component {
                         >
                         <GridToolbar>
                         
-                        <button
+                        {/* <button
                           title="Add File"
                           className="k-button k-primary"
                         >
                         Add File
-                        </button>
+                        </button> */}
+                        <Upload
+                batch={false}
+                multiple={false}
+                defaultFiles={[]}
+                withCredentials={false}
+                saveUrl={'save'}
+                removeUrl={'remove'}
+            />
                         
                         </GridToolbar>
                         <GridColumn field="name" title="File Template" />
@@ -179,7 +187,7 @@ class App extends React.Component {
                     </div>
                     <div>
                       <h3>File Image</h3>
-                      
+                      <img src="" alt="Image of Excel File" />
                     </div>
                 </Splitter>
             </div>
